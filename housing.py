@@ -62,7 +62,7 @@ st.write(f"Root Mean Squared Error: {rmse:.4f}")
 st.subheader("Predict House Price")
 input_features = {}
 for feature in X.columns:
-    input_features[feature] = st.slider(feature,min_value=X(feature).min(),max_value=X[feature].max())
+    input_features[feature] = st.slider(feature,min_value=X[feature].min(),max_value=X[feature].max())
 
 # Create a DataFrame from input features
 input_df = pd.DataFrame([input_features])
